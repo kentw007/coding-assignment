@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 1</title>
+    <style>
+        .outer-frame {
+            border: 1px solid red;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .inner-elements {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .text-field {
+            flex-grow: 1;
+            padding: 5px;
+            border: 1px solid #ccc;
+
+            &[contenteditable="true"] {
+                background-color: #fff;
+                color: #000;
+                cursor: text;
+            }
+
+            &[contenteditable="false"] {
+                background-color: #f0f0f0;
+                color: #888;
+                cursor: not-allowed;
+            }
+        }
+
+        .button-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            button {
+                padding: 5px 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer-frame" style="width: 400px">
+        <div class="inner-elements">
+            <div class="text-field" contenteditable="false">
+                Text field
+            </div>
+            <div class="button-wrapper">
+                <button class="edit-button">edit</button>
+                <button class="resize-button">resize</button>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
